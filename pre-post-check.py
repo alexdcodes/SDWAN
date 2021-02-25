@@ -1,4 +1,4 @@
-#import paramiko
+import paramiko
 import time
 import getpass
 
@@ -51,14 +51,12 @@ if device_type == "1":
     output_lr = ssh_conn.recv(65535)
     print(output_lr.decode('utf-8'))
 
-# Write Logfile to Desktop
 
-    lg = "C:/Users/adiker/Desktop/" + username + "-" + device_type + "-" + ip + ".log"
+    lg = "C:/Users/alex/Desktop/" + username + "-" + device_type + "-" + ip + ".log"
     logfile = open(lg, "wb")
     logfile.write(output_lr)
     print("\nLog file Created: " + lg)
 
-# 2960 Switch Connections and Commands
 
 elif device_type == "2":
     print("\nINFO: You are connecting to ", ip, "\n")
@@ -97,7 +95,7 @@ elif device_type == "2":
     print(output.decode('utf-8'))
 
     # Write Logfile to Desktop
-    lg = "C:/Users/adiker/Desktop/" + username + "-" + device_type + "-" + ip + ".log"
+    lg = "C:/Users/alex/Desktop/" + username + "-" + device_type + "-" + ip + ".log"
     logfile = open(lg, "wb")
     logfile.write(output)
     print("\nLog file Created: " + lg)
@@ -139,7 +137,7 @@ elif device_type == "3":
     print(output.decode('utf-8'))
 
     # Write Logfile to Desktop
-    lg = "C:/Users/adiker/Desktop/" + username + "-" + device_type + "-" + ip + ".log"
+    lg = "C:/Users/alex/Desktop/" + username + "-" + device_type + "-" + ip + ".log"
     logfile = open(lg, "wb")
     logfile.write(output)
     print("\nLog file Created: " + lg)
@@ -172,11 +170,7 @@ elif device_type == "4":
     output = ssh_conn_sw.recv(89935)
     print(output.decode('utf-8'))
 
-    lg = "C:/Users/alexdcodes/Desktop/" + username + "-" + device_type + "-" + ip + ".log"
+    lg = "C:/Users/alex/Desktop/" + username + "-" + device_type + "-" + ip + ".log"
     logfile = open(lg, "wb")
     logfile.write(output)
     print("\nLog file Created: " + lg)
-
-# ENCS-NFVIS-5408
-
-# ENCS–vEdge–VNF
